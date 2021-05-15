@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql-db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=vaibhavs
+      - MYSQL_USER=vaibhav
+      - MYSQL_PASSWORD=vaibhavs
+      - MYSQL_DATABASE=demo
+    ports:
+      - 3307:3306
+    volumes: 
+      - ./mysql-data:/var/lib/postgresql/data
